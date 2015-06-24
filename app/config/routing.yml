@@ -1,3 +1,13 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+#benchmark_product:
+    #resource: "@BenchmarkProductBundle/Controller/"
+    #type:     annotation
+    #prefix:   /
+
+###### REST ROUTES #######
+
+products:
+    type:     rest
+    prefix: /api/
+    resource: Benchmark\ProductBundle\Controller\ProductController
+    requirements:
+        _format: json

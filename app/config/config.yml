@@ -62,6 +62,23 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+fos_rest:
+    routing_loader:
+        default_format: json
+    param_fetcher_listener: true
+    format_listener: true
+    view:
+        default_engine: php
+    serializer:
+        serialize_null: true
+    exception:
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Symfony\Component\HttpKernel\Exception\NotFoundHttpException': 404
+            'Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException': 403
+            'Symfony\Component\HttpKernel\Exception\HttpException': 400
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
