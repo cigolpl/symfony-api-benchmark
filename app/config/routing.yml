@@ -11,3 +11,8 @@ products:
     resource: Benchmark\ProductBundle\Controller\ProductController
     requirements:
         _format: json
+
+benchmark_standard:
+    resource: Benchmark\ProductBundle\Controller\DefaultController
+    type:     annotation
+    prefix:   /
